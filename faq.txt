@@ -1,0 +1,8 @@
+Pergunta: O que é Ollama?
+Resposta: Ollama é uma ferramenta para rodar LLMs localmente.
+
+Pergunta: Como instalar Ollama?
+Resposta: Baixe do site oficial e execute o instalador.
+
+Pergunta: Qual modelo usar para embeddings?
+Resposta: Modelos como all-minilm são bons para embeddings.
