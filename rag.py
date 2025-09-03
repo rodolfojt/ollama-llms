@@ -64,10 +64,10 @@ def chat_com_rag(pergunta, embeddings):
     contexto_texto = "\n".join(contexto)  # Junta os chunks
     
     # Prepara prompt com contexto
-    prompt = f"Contexto: {contexto_texto}\nPergunta: {pergunta}\nResponda baseado no contexto."
+    prompt = f"Contexto: {contexto_texto}\nPergunta: {pergunta}\nResponda apenas baseado no contexto."
     
     payload = {
-        "model": "meu-llm",
+        "model": "gemma3:1b",
         "messages": [{"role": "user", "content": prompt}],
         "stream": False
     }
@@ -82,7 +82,7 @@ def chat_com_rag(pergunta, embeddings):
 print("Iniciando RAG...")
 embeddings = preparar_rag()  # Prepara o RAG uma vez
 #print("embeddings:", embeddings)
-embeddings = []
+
 print("RAG preparado! ")
 pergunta = "Como instalar Ollama?"
 print(f"---- Pergunta: {pergunta}")
